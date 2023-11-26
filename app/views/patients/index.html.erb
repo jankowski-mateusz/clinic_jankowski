@@ -1,27 +1,29 @@
+<%= turbo_stream_from "patients" %>
+
 <div class="card mt-5 mx-5">
   <div class="card-header border-bottom d-flex">
     <h5 class="m-0">Patients list</h5>
   </div>
-
   <div class="table-responsive">
-    <table class="table table-hover table-white">
+    <div class="m-2">
+      <%= render 'search' %>
+    </div>
+    <table class="table table-hover table-white table-striped">
       <thead class="table-light text-muted text-uppercase">
       <tr>
         <th>Name</th>
-        <th>Last name</th>
+        <th><%= sort_link(@q, :last_name, "Last Name") %></th>
         <th>Gender</th>
         <th>City</th>
         <th>Pesel</th>
-        <th>Date of birth</th>
-        <th></th>
+        <th><%= sort_link(@q, :date_of_birth, "Date of Birth") %></th>
       </tr>
       </thead>
-      <tbody>
+      <tbody id="patients">
       <%= render @patients %>
       </tbody>
     </table>
   </div>
-
   <div class="d-flex flex-wrap justify-content-center">
     <%== pagy_bootstrap_nav(@pagy) %>
   </div>

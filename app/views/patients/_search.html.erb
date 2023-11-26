@@ -1,0 +1,20 @@
+<%= search_form_for @q do |f| %>
+  <div class="row">
+    <div class="col-4 form-floating">
+      <%= f.text_field :last_name_cont, class: 'form-control' %>
+      <%= f.label :last_name %>
+    </div>
+    <div class="col-4 form-floating">
+      <%= f.text_field :pesel_cont, class: 'form-control' %>
+      <%= f.label :pesel %>
+    </div>
+    <div class="col-4 p-0 form-floating">
+      <%= f.select :gender_eq, Patient.genders.keys, { include_blank: 'All genders' }, { class: 'form-control', data: { controller: 'ts--select-single'} } %>
+      <%= f.label :gender %>
+    </div>
+  </div>
+    <div class="text-end mt-2">
+      <%= f.submit class: 'btn btn-primary' %>
+      <%= link_to "Cancel", patients_path, class: "btn btn-secondary me-2" %>
+    </div>
+<% end %>

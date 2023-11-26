@@ -4,6 +4,7 @@ source 'https://rubygems.org'
 
 ruby '3.2.2'
 
+gem 'activepesel'
 gem 'importmap-rails'
 gem 'jbuilder'
 gem 'pg', '~> 1.1'
@@ -33,6 +34,7 @@ group :development, :test do
 end
 
 group :development do
+  gem 'pry'
   gem 'rubocop', require: false
   gem 'rubocop-performance', require: false
   gem 'rubocop-rails', require: false

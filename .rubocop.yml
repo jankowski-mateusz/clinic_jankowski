@@ -1,0 +1,13 @@
+require:
+  - rubocop-rails
+  - rubocop-performance
+AllCops:
+  NewCops: enable
+  Exclude:
+    - 'db/**/*'
+    - 'bin/**/*'
+    - 'config/**/*'
+    - 'Rakefile'
+    - 'config.ru'
+Style/Documentation:
+  Enabled: false

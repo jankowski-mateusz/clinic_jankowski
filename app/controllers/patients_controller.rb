@@ -1,5 +1,8 @@
+# frozen_string_literal: true
+
 class PatientsController < ApplicationController
   def index
-    @pagy, @patients = pagy(Patient)
+    @q = Patient.ransack(params[:q])
+    @pagy, @patients = pagy(@q.result)
   end
 end

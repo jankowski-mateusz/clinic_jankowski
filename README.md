@@ -1,24 +1,11 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+You can run the application via bin/dev, but please also run Redis
+to use the action cable and enable refreshing only part of the page,
+e.g. for pagination. Currently, I am not able to add Reids to bin/dev
+and test it because I program on Windows and I already have a lot of problems,
+I have Redis on a virtual machine.
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+On this project I didn't focus too much on the front end because my main
+goal was to present my skills on the backend side, on the front end
+I would have spent too much time refining every detail

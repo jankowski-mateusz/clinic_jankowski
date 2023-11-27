@@ -1,8 +1,13 @@
 <tr>
+  <td><%= link_to new_patient_appointment_path(patient), class: 'nav-btn' do %>
+      <i class="bi bi-clipboard2-plus"></i>
+    <% end %>
+  </td>
   <td><%= patient.first_name %></td>
   <td><%= patient.last_name %></td>
   <td><%= patient.gender %></td>
   <td><%= patient.city %></td>
   <td><%= patient.pesel %></td>
   <td><%= patient.date_of_birth %></td>
+  <td><%= patient.appointments.count %></td>
 </tr>

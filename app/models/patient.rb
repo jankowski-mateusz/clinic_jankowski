@@ -3,6 +3,9 @@
 class Patient < ApplicationRecord
   enum gender: { male: 1, female: 2 }
 
+  has_many :appointments, dependent: :destroy
+  has_many :doctors, through: :appointments
+
   validates :first_name, :last_name, :city, :pesel, presence: true
   validates :pesel, uniqueness: true
 

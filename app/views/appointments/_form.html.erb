@@ -1,0 +1,21 @@
+<%= form_with(model: @appointment, url: [@patient, @appointment]) do |f| %>
+  <div class="form-floating mb-4">
+    <%= f.select :doctor_id, Doctor.all.map { |d| ["#{d.first_name} #{d.last_name}", d.id]}, { include_blank: true }, { class: 'form-control', required: true, data: {controller: 'ts--select-single'} } %>
+    <%= f.label :doctor %>
+  </div>
+
+  <div class="form-floating mb-4">
+    <%= f.number_field :price, step: 0.01, class: 'form-control', required: true%>
+    <%= f.label :price %>
+  </div>
+
+  <div class="form-floating mb-4">
+    <%= f.date_field :appointment_time, class: "form-control", required: true, min: Date.today %>
+    <%= f.label :appointment_time %>
+  </div>
+
+  <div class="mt-4 text-end">
+    <%= link_to "Cancel", :back, class: "btn btn-light" %>
+    <%= f.submit "Confirm", class: "btn btn-primary" %>
+  </div>
+<% end %>

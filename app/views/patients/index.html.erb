@@ -11,12 +11,14 @@
     <table class="table table-hover table-white table-striped">
       <thead class="table-light text-muted text-uppercase">
       <tr>
+        <th></th>
         <th>Name</th>
         <th><%= sort_link(@q, :last_name, "Last Name") %></th>
         <th>Gender</th>
         <th>City</th>
         <th>Pesel</th>
         <th><%= sort_link(@q, :date_of_birth, "Date of Birth") %></th>
+        <th>Appointments</th>
       </tr>
       </thead>
       <tbody id="patients">

@@ -1,0 +1,25 @@
+<%= turbo_stream_from "appointments" %>
+
+<div class="card mt-5 mx-5">
+  <div class="card-header border-bottom d-flex">
+    <h5 class="m-0">Appointments list</h5>
+  </div>
+  <div class="table-responsive">
+    <table class="table table-hover table-white table-striped">
+      <thead class="table-light text-muted text-uppercase">
+      <tr>
+        <th>Doctor</th>
+        <th>Patient</th>
+        <th>Price</th>
+        <th>Date</th>
+      </tr>
+      </thead>
+      <tbody id="appointments">
+      <%= render @appointments %>
+      </tbody>
+    </table>
+  </div>
+  <div class="d-flex flex-wrap justify-content-center">
+    <%== pagy_bootstrap_nav(@pagy) %>
+  </div>
+</div>

@@ -9,6 +9,6 @@ Rails.application.routes.draw do
   root "patients#index"
 
   resources :patients, only: :index do
-    resources :appointments
+    resources :appointments, only: %w[index new]
   end
 end

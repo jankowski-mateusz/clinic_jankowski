@@ -9,5 +9,5 @@
   <td><%= patient.city %></td>
   <td><%= patient.pesel %></td>
   <td><%= patient.date_of_birth %></td>
-  <td><%= patient.appointments.count %></td>
+  <td><%= link_to patient.appointments.size, patient_appointments_path(patient) %></td>
 </tr>

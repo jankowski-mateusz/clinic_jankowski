@@ -1,0 +1,6 @@
+<tr>
+  <td><%= "#{appointment.doctor.first_name} #{appointment.doctor.last_name}" %></td>
+  <td><%= "#{appointment.patient.first_name} #{appointment.patient.last_name}" %></td>
+  <td><%= appointment.price %> PLN</td>
+  <td><%= appointment.appointment_time.strftime('%c') %></td>
+</tr>

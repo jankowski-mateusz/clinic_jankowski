@@ -11,4 +11,5 @@ Rails.application.routes.draw do
   resources :patients, only: :index do
     resources :appointments, only: %w[index new]
   end
+  resources :patients_charts, only: :index
 end

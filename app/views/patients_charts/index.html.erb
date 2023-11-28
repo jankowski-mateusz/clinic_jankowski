@@ -1,0 +1,8 @@
+<div class="card mt-5 mx-5">
+  <div class="card-header border-bottom d-flex">
+    <h5 class="m-0">Chart of patients depending on date of birth</h5>
+  </div>
+  <div data-controller="bar-chart">
+    <canvas class="chart" data-chart-data-value='<%= @chart_data.to_json %>' height="400"></canvas>
+  </div>
+</div>
